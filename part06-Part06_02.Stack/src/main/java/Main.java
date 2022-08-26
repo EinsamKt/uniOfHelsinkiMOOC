@@ -14,5 +14,6 @@ s.add("5");
 while (!s.isEmpty()) {
     System.out.println(s.take());
 }
+        System.out.println(s.values());
     }
 }
