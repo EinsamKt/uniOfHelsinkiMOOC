@@ -2,6 +2,7 @@
 import fi.helsinki.cs.tmc.edutestutils.MockStdio;
 import fi.helsinki.cs.tmc.edutestutils.Points;
 import java.io.File;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
@@ -83,7 +84,7 @@ public class RecipeSearchTest {
         test(Arrays.asList("Sausage soup", "20", "sausage", "potato", "water", "", "Tofu rolls", "75", "tofu", "onion", "cucumber", "avocado"), Arrays.asList("find ingredient", "cucumber"), Arrays.asList("Tofu rolls, cooking time: 75"), Arrays.asList("Sausage soup, cooking time: 20"));
     }
 
-    public void test(List<String> fileContents, List<String> commandList, List<String> expectedPrints, List<String> notExpectedPrints) {
+    public void test(List<String> fileContents, List<String> commandList, List<String> expectedPrints, List<String> notExpectedPrints) throws IOException {
         String file = createTestFile(fileContents);
 
         String commands = file + "\n";

@@ -73,12 +73,12 @@ public class Searching {
             }
 
             if (books.get(middle).getId() < searchedId) {
-                begin = middle++;
+                begin = middle + 1;
 
             }
 
             if (books.get(middle).getId() > searchedId) {
-                end = middle--;
+                end = middle - 1;
             }
 
         }

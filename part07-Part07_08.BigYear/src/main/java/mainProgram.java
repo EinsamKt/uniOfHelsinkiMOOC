@@ -9,6 +9,11 @@ public class mainProgram {
         // as a parameter
 
         Scanner scan = new Scanner(System.in);
+        
+        BirdsCage cage = new BirdsCage();
+        UserInterface ui = new UserInterface(scan, cage);
+        
+        ui.start();
 
     }
 
